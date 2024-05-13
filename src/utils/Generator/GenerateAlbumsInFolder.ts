@@ -41,7 +41,8 @@ const SchemaGenerateAlbumsInFolder = z.object({
 export type TypeGenerateAlbumsInFolder = z.infer<typeof SchemaGenerateAlbumsInFolder>
 
 export const GenerateAlbumsInFolder = async (folderPath: string) => {
-	const dataFolder = await ReqFolder(folderPath)
+	try {
+		const dataFolder = await ReqFolder(folderPath)
 	const hightlightImage = (
 		await ReqImage_Sizes(
 			(
@@ -119,4 +120,8 @@ export const GenerateAlbumsInFolder = async (folderPath: string) => {
 	}
 
 	return data
+	} catch (error) {
+		console.log('Error in GenerateAlbumsInFolder', error)
+		return undefined
+	}
 }

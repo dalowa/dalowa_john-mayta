@@ -26,14 +26,14 @@ const ResAlbum_Images = z.object({
 })
 export type TypeResAlbum_Images = z.infer<typeof ResAlbum_Images>
 
-const defaultUrl = '/api/v2/album/vM3Zz9!images'
+
 
 export async function ReqAlbum_Images(
-	URL: string = defaultUrl,
+	URL: string,
 ): Promise<TypeResAlbum_Images | undefined> {
 	/* console.log('ReqAlbum_Images has been called') */
 	try {
-		if (typeof URL !== 'string') throw new Error('URL must be a string')
+		if (typeof URL !== 'string') return undefined
 
 		const response = await axiosWithOAuth(URL)
 		const responseJSON = await response.data

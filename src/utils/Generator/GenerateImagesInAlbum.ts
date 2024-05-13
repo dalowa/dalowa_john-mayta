@@ -40,8 +40,9 @@ export type TypeGenerateImagesInAlbum = z.infer<typeof SchemaGenerateImagesInAlb
 
 export const GenerateImagesInAlbum = async (
 	albumId: string,
-): Promise<TypeGenerateImagesInAlbum> => {
-	const dataAlbum = await ReqAlbum(`/api/v2/album/${albumId}`)
+): Promise<TypeGenerateImagesInAlbum | null> => {
+	try {
+		const dataAlbum = await ReqAlbum(`/api/v2/album/${albumId}`)
 
 	const albumHighlightImage = await ReqAlbum_Highlightimage(
 		dataAlbum?.Response.Album.Uris.HighlightImage.Uri,
@@ -91,4 +92,8 @@ export const GenerateImagesInAlbum = async (
 	}
 
 	return data
+	} catch (error) {
+		console.log('ERROR IN GENERATE IMAGES IN ALBUM', error)
+		return null
+	}
 }

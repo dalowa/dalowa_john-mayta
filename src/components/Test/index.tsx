@@ -4,10 +4,19 @@ interface Props {
    
 }
 
-export const Test = async( {}:Props) => {
+/* const notSimpleFunction = async() => {
+   try {
+      const pgdt = await GenerateImagesInAlbum('xaasa')
+   } catch (error) {
+      console.log
+   }
+} */
 
-   /* const pgdt = await GenerateImagesInAlbum('xaasa')
-   console.log(pgdt) */
+export const Test = async( {}:Props) => {
+   console.log("TEST COMPONENT")
+   const pgdt = await GenerateImagesInAlbum('xaasa')
+   console.log("LOOK HERE",pgdt)
+   
 
    return (
       <>

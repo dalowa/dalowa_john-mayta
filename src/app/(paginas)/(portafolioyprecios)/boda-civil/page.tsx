@@ -4,6 +4,7 @@ import {
 	createGalleryNavigatorPageMetadata,
 	createGalleryNavigatorPageInformation,
 } from '@/utils/Functions'
+import { TypeGenerateAlbumsInFolder } from '@/utils/Generator'
 
 export const generateMetadata = async () => {
 	return await createGalleryNavigatorPageMetadata(
@@ -18,7 +19,7 @@ const PageBodaCivil = async () => {
 
 	return (
 		<>
-			<GalleryNavigator info={galleryNavigatorPageInformation} />
+			<GalleryNavigator info={galleryNavigatorPageInformation as TypeGenerateAlbumsInFolder} />
 		</>
 	)
 }
