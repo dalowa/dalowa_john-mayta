@@ -18,6 +18,7 @@ const config: Config = {
 				'agatha-button-bg-b': '#1E1E1F',
 				'agatha-button-bg-c': '#363636',
 				'agatha-button-bg-d': '#282828',
+				'agatha-button-bg-e': '#987F28',
 			},
 			backgroundImage: {},
 			width: {

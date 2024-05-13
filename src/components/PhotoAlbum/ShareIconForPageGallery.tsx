@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation'
 import React, { useEffect } from 'react'
 import { FaShareAlt } from 'react-icons/fa'
 
-
 interface Props {
 	arrayImages: {
 		blurUrl: string

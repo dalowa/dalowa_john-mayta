@@ -1,6 +1,14 @@
+import BaseFrame from '@/components/Common/BaseFrame/BaseFrame'
+
 interface Props {}
 
-const Hablemos = ({}: Props) => {
-	return <></>
+const Hablemos = async ({}: Props) => {
+	return (
+		<>
+			<BaseFrame>
+				<></>
+			</BaseFrame>
+		</>
+	)
 }
 export default Hablemos

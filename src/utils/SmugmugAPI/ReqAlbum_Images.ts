@@ -26,11 +26,7 @@ const ResAlbum_Images = z.object({
 })
 export type TypeResAlbum_Images = z.infer<typeof ResAlbum_Images>
 
-
-
-export async function ReqAlbum_Images(
-	URL: string,
-): Promise<TypeResAlbum_Images | undefined> {
+export async function ReqAlbum_Images(URL: string): Promise<TypeResAlbum_Images | undefined> {
 	/* console.log('ReqAlbum_Images has been called') */
 	try {
 		if (typeof URL !== 'string') return undefined

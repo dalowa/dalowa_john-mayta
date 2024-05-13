@@ -19,7 +19,7 @@ const PageFotografiaDeBodas = async () => {
 
 	return (
 		<>
-			<GalleryNavigator info={galleryNavigatorPageInformation as TypeGenerateAlbumsInFolder}/>
+			<GalleryNavigator info={galleryNavigatorPageInformation as TypeGenerateAlbumsInFolder} />
 		</>
 	)
 }

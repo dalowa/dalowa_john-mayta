@@ -1,8 +1,6 @@
-import { GenerateImagesInAlbum } from "@/utils/Generator/GenerateImagesInAlbum"
+import { GenerateImagesInAlbum } from '@/utils/Generator/GenerateImagesInAlbum'
 
-interface Props {
-   
-}
+interface Props {}
 
 /* const notSimpleFunction = async() => {
    try {
@@ -12,15 +10,10 @@ interface Props {
    }
 } */
 
-export const Test = async( {}:Props) => {
-   console.log("TEST COMPONENT")
-   const pgdt = await GenerateImagesInAlbum('xaasa')
-   console.log("LOOK HERE",pgdt)
-   
+export const Test = async ({}: Props) => {
+	console.log('TEST COMPONENT')
+	const pgdt = await GenerateImagesInAlbum('xaasa')
+	console.log('LOOK HERE', pgdt)
 
-   return (
-      <>
-         
-      </>
-   )
+	return <></>
 }

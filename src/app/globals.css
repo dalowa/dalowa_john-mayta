@@ -75,3 +75,23 @@
 	);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#131313",endColorstr="#131313",GradientType=1);
 }
+
+.agatha-notfound-filter {
+	background: rgb(11, 11, 11);
+	background: -moz-linear-gradient(
+		180deg,
+		rgba(11, 11, 11, 0.48503151260504207) 0%,
+		rgba(11, 11, 11, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		180deg,
+		rgba(11, 11, 11, 0.48503151260504207) 0%,
+		rgba(11, 11, 11, 1) 100%
+	);
+	background: linear-gradient(
+		180deg,
+		rgba(11, 11, 11, 0.48503151260504207) 0%,
+		rgba(11, 11, 11, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0b0b0b",endColorstr="#0b0b0b",GradientType=1);
+}

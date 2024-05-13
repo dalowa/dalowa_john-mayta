@@ -1,6 +1,12 @@
 interface Props {}
-
+import BaseFrame from '@/components/Common/BaseFrame/BaseFrame'
 const SobreMi = ({}: Props) => {
-	return <></>
+	return (
+		<>
+			<BaseFrame>
+				<></>
+			</BaseFrame>
+		</>
+	)
 }
 export default SobreMi

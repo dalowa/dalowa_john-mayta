@@ -1,17 +1,18 @@
-import { Test } from "@/components/Test";
-import { GenerateImagesInAlbum } from "@/utils/Generator/GenerateImagesInAlbum";
+import { Test } from '@/components/Test'
+import { GenerateImagesInAlbum } from '@/utils/Generator/GenerateImagesInAlbum'
+import BaseFrame from '@/components/Common/BaseFrame/BaseFrame'
 
-interface Props {
-   
+interface Props {}
+
+const TestPrivatePage = async ({}: Props) => {
+	return (
+		<>
+			<BaseFrame>
+				<>
+					<Test />
+				</>
+			</BaseFrame>
+		</>
+	)
 }
-
-const TestPrivatePage = async({}:Props) => {
-
-   
-   return (
-      <>
-         <Test />
-      </>
-   )
-}
-export default TestPrivatePage;
+export default TestPrivatePage

@@ -1,3 +1,4 @@
+import BaseFrame from '@/components/Common/BaseFrame/BaseFrame'
 import GalleryMain from '@/components/Home/GalleryMain'
 import { MainPageEndPoints } from '@/data/website-information'
 
@@ -8,9 +9,9 @@ export default async function Inicio() {
 
 	return (
 		<>
-			<div className="agatha-home-frame-height mt-[4.5rem] w-screen ">
+			<BaseFrame>
 				<GalleryMain data={d} />
-			</div>
+			</BaseFrame>
 			<ul className="absolute top-0 z-10 hidden">
 				<li className="-translate-x-[000%] w-1 h-1"></li>
 				<li className="-translate-x-[100%] w-1 h-1"></li>

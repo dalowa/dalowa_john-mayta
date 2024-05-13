@@ -19,7 +19,7 @@ interface Props {
 	originGalleryUrl: string
 }
 
-export const PhotoAlbum = async ({ AlbumInformation, image,originGalleryUrl }: Props) => {
+export const PhotoAlbum = async ({ AlbumInformation, image, originGalleryUrl }: Props) => {
 	/* const pgdt = await GenerateImagesInAlbum(AlbumId) */
 
 	const pgdt = AlbumInformation
@@ -28,9 +28,10 @@ export const PhotoAlbum = async ({ AlbumInformation, image,originGalleryUrl }: P
 		backgroundImage: pgdt.HighlightImage.largeScreen,
 		blurBackgroundImage: pgdt.HighlightImage.blurURL,
 		title: pgdt.Title,
-		description: 'Vivamus sed ex hendrerit, gravida neque a, ullamcorper lectus. Aenean lobortis non nisl non facilisis. Quisque pretium posuere sem, at ultricies quam posuere sed. Maecenas accumsan mauris in massa dignissim dapibus. Nullam a nisl quis arcu laoreet atre.',
+		description:
+			'Vivamus sed ex hendrerit, gravida neque a, ullamcorper lectus. Aenean lobortis non nisl non facilisis. Quisque pretium posuere sem, at ultricies quam posuere sed. Maecenas accumsan mauris in massa dignissim dapibus. Nullam a nisl quis arcu laoreet atre.',
 		amountOfPhotos: pgdt.images.length.toString(),
-		byWho: "John Mayta",
+		byWho: 'John Mayta',
 		whoPhotoProfileUrl: JohnMaytaProfilePhotoLink,
 	}
 
@@ -97,15 +98,14 @@ export const PhotoAlbum = async ({ AlbumInformation, image,originGalleryUrl }: P
 			<PhotoAlbumPageFrame data={agathaData}>
 				<div className="py-[1.25rem] md:py-[1.5rem] flex flex-col items-center lg:py-[2.25rem] lg:px-[1rem] xl:px-[0.5rem] xl:py-[2.5rem]">
 					<div className="font-mono text-agatha-text-c gap-2 text-[100%] w-[90%] sm:w-[93%] md:w-[95%] xl:w-[94%] 2xl:w-[96.75%] 3xl:w-[97%] flex items-center justify-end mt-[0.25rem] mb-[2.75rem] px-[0.25rem]">
-						<div className='basis-[50%] flex items-center justify-start'>
+						<div className="basis-[50%] flex items-center justify-start">
 							<BackToGalleryNavigator originUrl={originGalleryUrl} />
 						</div>
-						<div className='basis-[50%] gap-[1.5rem] flex items-center justify-end'>
+						<div className="basis-[50%] gap-[1.5rem] flex items-center justify-end">
 							<NextOrBack />
 							<ShareIconForPageGallery arrayImages={IMAGES_HD} currentImage={image || ''} />
 							<DownloadAlbumPhotos />
 						</div>
-						
 					</div>
 
 					<Photos

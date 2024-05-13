@@ -5,8 +5,8 @@ const SchemaPhotoAlbumPageFrameData = z.object({
 	blurBackgroundImage: z.string(),
 	title: z.string(),
 	description: z.string().optional(),
-   amountOfPhotos: z.string(),
-   byWho: z.string(),
+	amountOfPhotos: z.string(),
+	byWho: z.string(),
 	whoPhotoProfileUrl: z.string().optional(),
 })
 

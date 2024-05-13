@@ -14,6 +14,12 @@ const nextConfig = {
 				port: '',
 				pathname: '/**/**/**/**/**/**/*',
 			},
+			{
+				protocol: 'https',
+				hostname: 'demo.themetorium.net',
+				port: '',
+				pathname: '/**/**/**/**/**/**/*',
+			},
 		],
 		unoptimized: true,
 	},
