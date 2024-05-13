@@ -1,5 +1,5 @@
 import { PhotoAlbum } from '@/components/PhotoAlbum/PhotoAlbum'
-import { PortfolioAndPricingEndpoints } from '@/data/website-information'
+import { MainPageEndPoints, PortfolioAndPricingEndpoints } from '@/data/website-information'
 import { GenerateAlbumMetadata } from '@/utils/Generator/GenerateAlbumMetadata'
 import { GenerateImagesInAlbum } from '@/utils/Generator/GenerateImagesInAlbum'
 import { ReqFolder_Albums, TypeResFolder_Albums } from '@/utils/SmugmugAPI'
@@ -7,7 +7,7 @@ import { Metadata } from 'next'
 
 export async function generateStaticParams() {
 	const data = (await ReqFolder_Albums(
-		`${PortfolioAndPricingEndpoints.boda_civil.requestUrl}!albums`,
+		`${MainPageEndPoints.inicio.requestUrl}!albums`,
 	)) as TypeResFolder_Albums
 
 	const r = data.Response.Album.map((element) => ({
@@ -37,8 +37,13 @@ const PageAlbumId = async ({ params, searchParams }: Props) => {
 
 	return (
 		<>
-			<PhotoAlbum originGalleryUrl={PortfolioAndPricingEndpoints.boda_civil.pathForLink} AlbumInformation={pgdt} image={searchParams.image} />
+			<PhotoAlbum 
+				originGalleryUrl={MainPageEndPoints.inicio.pathForLink} 
+				AlbumInformation={pgdt} 
+				image={searchParams.image} 
+			/>
 		</>
 	)
 }
+
 export default PageAlbumId

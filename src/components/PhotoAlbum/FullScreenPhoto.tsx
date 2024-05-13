@@ -69,9 +69,9 @@ export const FullScreenPhoto = () => {
 	}
 	return (
 		<>
-			<div className="fixed top-0 left-0 z-[200] bg-black w-screen h-screen text-words-color">
+			<div className="fixed top-0 left-0 z-[200] bg-agatha-gray w-screen h-screen text-agatha-text-c">
 				<div className="relative w-full h-full flex justify-center items-center ">
-					<div className="absolute top-0 w-full bg-[#1b1b1b]/50 z-[250]">
+					<div className="absolute top-0 w-full bg-agatha-black/50 z-[250]">
 						<div className="w-full py-[0.25rem]">
 							<ul className="flex text-xl justify-end py-3">
 								<li className="px-4">
@@ -120,13 +120,13 @@ export const FullScreenPhoto = () => {
 							/>
 						</div>
 						<div
-							className="absolute left-2  p-2 text-2xl text-words-color bg-black/50"
+							className="absolute left-2  p-2 text-2xl text-words-color bg-agatha-gray/50"
 							onClick={handleDecrease}
 						>
 							<FaArrowLeftLong />
 						</div>
 						<div
-							className="absolute right-2 p-2 text-2xl text-words-color bg-black/50"
+							className="absolute right-2 p-2 text-2xl text-words-color bg-agatha-gray/50"
 							onClick={handleIncrease}
 						>
 							<FaArrowRightLong />

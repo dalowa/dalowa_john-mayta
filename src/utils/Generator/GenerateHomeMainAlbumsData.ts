@@ -63,7 +63,7 @@ export async function GenerateHomeMainAlbumsData(URL: string) {
 		title: e.Name || '',
 		amountOfPhotos: AlbumsImagesAmount[i].toString(),
 		id: e.AlbumKey,
-		pathForLink: `/es/album/${e.AlbumKey}`,
+		pathForLink: `/album/${e.AlbumKey}`,
 	})) as TypeHomeMainAlbumsData
 
 	return data
