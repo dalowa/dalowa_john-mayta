@@ -26,7 +26,7 @@ const SobreMi = async ({}: Props) => {
 			{/* <BaseFrame> */}
 			<AboutMePageFrame data={agathaData}>
 				<>
-					<section className="p-5 lg:p-10 flex flex-col lg:flex-row lg:gap-[1.75rem] lg:justify-between">
+					<div className="p-5 lg:p-10 flex flex-col lg:flex-row lg:gap-[1.75rem] lg:justify-between">
 						<div className="flex flex-col gap-[1.25rem] mb-[2.4rem] lg:max-w-[560px] xl:max-w-[690px]">
 							<h3 className="text-2xl font-light leading-normal tracking-[1px] text-agatha-text-c">{`JOHN MAYTA`}</h3>
 							<h6 className="text-xs font-normal leading-normal tracking-[1px] text-agatha-text-c uppercase">{`Photographer / Designer`}</h6>
@@ -50,12 +50,12 @@ const SobreMi = async ({}: Props) => {
 								src={
 									'https://demo.themetorium.net/html/agatha/dark/assets/img/team/team-1.jpg'
 								}
-								className='object-contain top-0 xl:object-fill'
+								className="object-contain top-0 xl:object-fill"
 								alt=""
 								fill
 							/>
 						</div>
-					</section>
+					</div>
 				</>
 			</AboutMePageFrame>
 			{/* </BaseFrame> */}

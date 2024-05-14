@@ -22,6 +22,7 @@ export async function POST(response: NextRequest) {
 	const whatsapp: string = limpiarCadena(requestHeaders.get('whatsapp') as string)
 	const fullName: string = limpiarCadena(requestHeaders.get('fullName') as string)
 	const howFoundUs: string = limpiarCadena(requestHeaders.get('howFoundUs') as string)
+	const message: string = limpiarCadena(requestHeaders.get('message') as string)
 
 	try {
 		const data = await resend.emails.send({
@@ -35,6 +36,7 @@ export async function POST(response: NextRequest) {
 				whatsapp,
 				fullName,
 				howFoundUs,
+				message
 			}),
 			text: '',
 		})

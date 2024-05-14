@@ -7,6 +7,7 @@ interface EmailTemplateProps {
 	whatsapp: string
 	fullName: string
 	howFoundUs: string
+	message: string
 }
 
 const stilos = {}
@@ -18,6 +19,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
 	whatsapp,
 	fullName,
 	howFoundUs,
+	message
 }) => (
 	<ul>
 		<li>{`Email :${email}`}</li>
@@ -26,5 +28,6 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
 		<li>{`Whatsapp number :${whatsapp}`}</li>
 		<li>{`Full name :${fullName}`}</li>
 		<li>{`How found us :${howFoundUs}`}</li>
+		<li>{`Message: ${message}`}</li>
 	</ul>
 )

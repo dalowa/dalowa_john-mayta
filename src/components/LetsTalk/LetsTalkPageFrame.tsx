@@ -7,7 +7,7 @@ interface Props {
 	data: TypeAgathaPageFrameData
 }
 
-export const AboutMePageFrame = ({ data, children }: Props) => {
+export const LetsTalkPageFrame = ({ data, children }: Props) => {
 	/* 
 		- Poner maximos width para el section y que sea en funcion de lo que recibe en props y testear en las diferentes pantallas
 
@@ -17,7 +17,7 @@ export const AboutMePageFrame = ({ data, children }: Props) => {
 	return (
 		<>
 			<main
-				className={`font-mono text-white bg-agatha-gray min-h-screen flex flex-col relative z-10 w-screen overflow-hidden font-normal pt-[4.5rem] max-h-none`}
+				className={`font-mono text-white bg-agatha-gray flex flex-col relative z-10 w-screen overflow-hidden font-normal pt-[4.5rem] max-h-none`}
 			>
 				<div className={`flex justify-center w-screen aspect-[16/9] absolute bg-agatha-black`}>
 					<Image
@@ -43,8 +43,8 @@ export const AboutMePageFrame = ({ data, children }: Props) => {
 						>{`${data.subTitle}`}</h2>
 					</header>
 					<section
-						className={`w-[92%] sm:w-[93.5%] md:w-[94%] lg:w-[95%] mb-[2.5vw] md:mb-[3vw] lg:mb-[5vw] xl:mb-[6vw] relative max-w-[${data?.sectionConfig?.maxWidth}] text-base font-normal mx-auto 
-						agatha-frame-section-background-gradient max-w-[1140px]`}
+						className={`w-[92%] sm:w-[94%] md:w-[94%] lg:w-[92%] xl:w-[95%] max-w-[1140px] mb-[2vh] md:mb-[3vh] lg:bg-[4vh] xl:mb-[6vh] relative max-w-[${data?.sectionConfig?.maxWidth}] text-base font-normal mx-auto 
+						agatha-frame-section-background-gradient min-h-[100vh] `}
 					>
 						{children}
 					</section>
