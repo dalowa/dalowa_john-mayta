@@ -17,7 +17,7 @@ export const LetsTalkPageFrame = ({ data, children }: Props) => {
 	return (
 		<>
 			<main
-				className={`font-mono text-white bg-agatha-gray flex flex-col relative z-10 w-screen overflow-hidden font-normal pt-[4.5rem] max-h-none`}
+				className={`font-mono text-white bg-agatha-gray flex flex-col relative z-10 w-screen min-h-screen overflow-hidden font-normal pt-[4.5rem] max-h-none`}
 			>
 				<div className={`flex justify-center w-screen aspect-[16/9] absolute bg-agatha-black`}>
 					<Image
@@ -44,7 +44,7 @@ export const LetsTalkPageFrame = ({ data, children }: Props) => {
 					</header>
 					<section
 						className={`w-[92%] sm:w-[94%] md:w-[94%] lg:w-[92%] xl:w-[95%] max-w-[1140px] mb-[2vh] md:mb-[3vh] lg:bg-[4vh] xl:mb-[6vh] relative max-w-[${data?.sectionConfig?.maxWidth}] text-base font-normal mx-auto 
-						agatha-frame-section-background-gradient min-h-[100vh] `}
+						agatha-frame-section-background-gradient `}
 					>
 						{children}
 					</section>
