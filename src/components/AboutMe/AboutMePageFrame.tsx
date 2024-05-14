@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import ButtonPlansAndPrices from './ButtonPlansAndPrices'
+
 import { TypeAgathaPageFrameData } from '@/utils/Models/SchemaAgathaPageFrameData'
 
 interface Props {
@@ -7,29 +7,17 @@ interface Props {
 	data: TypeAgathaPageFrameData
 }
 
-export const AgathaPageFrame = ({ data, children }: Props) => {
+export const AboutMePageFrame = ({ data, children }: Props) => {
 	/* 
 		- Poner maximos width para el section y que sea en funcion de lo que recibe en props y testear en las diferentes pantallas
 
 
 	*/
 
-	const detect = () => {
-		if (data.subTitle == '' || data.subTitle == undefined) {
-			return <ButtonPlansAndPrices />
-		}
-
-		return (
-			<h2
-				className={` text-agatha-text-c leading-[1rem] font-normal text-center text-[0.8rem] w-[80%] md:w-[65%] text-color-gray-smalltext`}
-			>{`${data.subTitle}`}</h2>
-		)
-	}
-
 	return (
 		<>
 			<main
-				className={`font-mono text-white bg-agatha-gray flex flex-col relative z-10 w-screen overflow-hidden font-normal pt-[4.5rem] max-h-none`}
+				className={`font-mono text-white bg-agatha-gray min-h-screen flex flex-col relative z-10 w-screen overflow-hidden font-normal pt-[4.5rem] max-h-none`}
 			>
 				<div className={`flex justify-center w-screen aspect-[16/9] absolute bg-agatha-black`}>
 					<Image
@@ -50,11 +38,13 @@ export const AgathaPageFrame = ({ data, children }: Props) => {
 						<h1
 							className={`tracking-[0.25rem] text-agatha-text-a font-thin text-center text-3xl md:text-[1.75rem] w-[95%] lg:text-[2.4rem]`}
 						>{`${data.title}`}</h1>
-						{detect()}
+						<h2
+							className={` text-agatha-text-c leading-[1rem] font-normal text-center text-[0.8rem] w-[80%] md:w-[65%] text-color-gray-smalltext`}
+						>{`${data.subTitle}`}</h2>
 					</header>
 					<section
-						className={`w-[92%] sm:w-[93.5%] md:w-[95.5%] lg:w-[92%] mb-[2vh] md:mb-[3vh] lg:bg-[4vh] xl:mb-[6vh] relative max-w-[${data?.sectionConfig?.maxWidth}] text-base font-normal mx-auto 
-						agatha-frame-section-background-gradient min-h-[100vh] `}
+						className={`w-[92%] sm:w-[93.5%] md:w-[94%] lg:w-[95%] mb-[2.5vw] md:mb-[3vw] lg:mb-[5vw] xl:mb-[6vw] relative max-w-[${data?.sectionConfig?.maxWidth}] text-base font-normal mx-auto 
+						agatha-frame-section-background-gradient max-w-[1140px]`}
 					>
 						{children}
 					</section>

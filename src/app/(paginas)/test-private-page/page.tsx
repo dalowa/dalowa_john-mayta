@@ -1,5 +1,5 @@
 import { Test } from '@/components/Test'
-import { GenerateImagesInAlbum } from '@/utils/Generator/GenerateImagesInAlbum'
+
 import BaseFrame from '@/components/Common/BaseFrame/BaseFrame'
 
 interface Props {}

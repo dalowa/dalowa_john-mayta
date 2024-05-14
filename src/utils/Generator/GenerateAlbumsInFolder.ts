@@ -115,7 +115,7 @@ export const GenerateAlbumsInFolder = async (folderPath: string) => {
 				smallScreen: hightlightImage?.SmallImageUrl as string,
 				mediumScreen: hightlightImage?.MediumImageUrl as string,
 				largeScreen: hightlightImage?.LargeImageUrl as string,
-				extraLargeScreen: hightlightImage?.X4LargeImageUrl as string,
+				extraLargeScreen: hightlightImage?.X2LargeImageUrl as string,
 				blurURL: imageBlurUrl as string,
 			},
 			Albums: completeFolderAlbumsHighlightImage,

@@ -95,3 +95,11 @@
 	);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0b0b0b",endColorstr="#0b0b0b",GradientType=1);
 }
+
+.sobremi-quote::before {
+	position: absolute;
+	content: open-quote;
+	top: 0;
+	left: -5px;
+	font-size: 28px;
+}

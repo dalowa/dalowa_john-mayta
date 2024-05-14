@@ -1,5 +1,4 @@
 import { divideArrayBetweenX, x } from '@/utils/Functions/divideArrayBetweenX'
-import { AgathaPageFrame } from '../Common/AgathaPageFrame/AgathaPageFrame'
 import { TypeGenerateImagesInAlbum } from '@/utils/Generator/GenerateImagesInAlbum'
 import { TypeAgathaPageFrameData } from '@/utils/Models/SchemaAgathaPageFrameData'
 import { ShareIconForPageGallery } from './ShareIconForPageGallery'

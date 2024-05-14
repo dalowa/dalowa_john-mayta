@@ -24,19 +24,19 @@ export const MainPageEndPoints = {
 	sobre_mi: {
 		id: '002',
 		name: 'sobre mi',
-		requestUrl: '',
+		requestUrl: '/api/v2/folder/user/seven/FAKE-OWNER-TESTING/ES/PAGES/SOBRE-MI',
 		pathForLink: '/sobre-mi',
 	},
 	hablemos: {
 		id: '003',
 		name: 'hablemos',
-		requestUrl: '',
+		requestUrl: '/api/v2/folder/user/seven/FAKE-OWNER-TESTING/ES/PAGES/HABLEMOS',
 		pathForLink: '/hablemos',
 	},
 	blog: {
 		id: '004',
 		name: 'blog',
-		requestUrl: '',
+		requestUrl: '/api/v2/folder/user/seven/FAKE-OWNER-TESTING/ES/PAGES/BLOG',
 		pathForLink: '/blog',
 	},
 }
