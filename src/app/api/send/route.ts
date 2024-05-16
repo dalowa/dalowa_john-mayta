@@ -36,7 +36,7 @@ export async function POST(response: NextRequest) {
 				whatsapp,
 				fullName,
 				howFoundUs,
-				message
+				message,
 			}),
 			text: '',
 		})

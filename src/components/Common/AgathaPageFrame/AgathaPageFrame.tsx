@@ -63,5 +63,3 @@ export const AgathaPageFrame = ({ data, children }: Props) => {
 		</>
 	)
 }
-
-/* sma:min-h-[33rem] mda:min-h-[37rem] lga:min-h-[45rem] xla:min-h-[50rem] 4xla:min-h-[55rem] 5xla:min-h-[90rem] */

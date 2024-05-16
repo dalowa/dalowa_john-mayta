@@ -26,7 +26,6 @@ const Hablemos = async ({}: Props) => {
 	return (
 		<>
 			<LetsTalkPageFrame data={agathaData}>
-				
 				<div className="p-5 lg:p-10 ">
 					<div className="text-agatha-text-c flex flex-col lg:flex-row">
 						<address className="flex flex-col font-light text-sm leading-6 not-italic tracking-[1px] lg:basis-[33.4%]">
@@ -46,14 +45,14 @@ const Hablemos = async ({}: Props) => {
 							</span>
 							<ListIcons />
 						</address>
-						<div className='flex flex-col my-[1rem] gap-[1.2rem] lg:basis-[66.6%] lg:px-4 mt-[0.625rem]'>
+						<div className="flex flex-col my-[1rem] gap-[1.2rem] lg:basis-[66.6%] lg:px-4 mt-[0.625rem]">
 							<h4 className="uppercase text-lg leading-normal font-light tracking-[1px]">{`Don't be shy, tell us what's on your mind.`}</h4>
 							<p className="text-sm font-light leading-6 tracking-[1px]">
 								{`Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam consequat.`}
 							</p>
 						</div>
 					</div>
-					< RequestWeddingInformationForm /> 
+					<RequestWeddingInformationForm />
 				</div>
 			</LetsTalkPageFrame>
 		</>

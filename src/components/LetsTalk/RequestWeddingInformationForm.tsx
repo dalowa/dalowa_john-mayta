@@ -12,7 +12,7 @@ const RequestWeddingInformationForm = ({}: Props) => {
 	const [whatsapp, setWhatsapp] = useState('')
 	const [fullName, setFullName] = useState('')
 	const [howFoundUs, setHowFoundUs] = useState('¿Cómo se enteró de nosotros?')
-   const [message, setMessage] = useState("")
+	const [message, setMessage] = useState('')
 
 	const formReady = () => {
 		const v =
@@ -21,14 +21,15 @@ const RequestWeddingInformationForm = ({}: Props) => {
 			weddingLocation !== '' &&
 			/^[0-9+ ]{7,}$/.test(whatsapp) &&
 			/^(?=.*[a-zA-Z])[\w\s]{2,40}$/.test(fullName) &&
-			howFoundUs !== '¿Cómo se enteró de nosotros?' && message !== ''
+			howFoundUs !== '¿Cómo se enteró de nosotros?' &&
+			message !== ''
 		console.log(v)
 		return v
 	}
 
-   const handleMessageChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-      setMessage(e.target.value)
-   }
+	const handleMessageChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+		setMessage(e.target.value)
+	}
 
 	const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -73,7 +74,7 @@ const RequestWeddingInformationForm = ({}: Props) => {
 					whatsapp,
 					fullName,
 					howFoundUs,
-					message
+					message,
 				},
 			})
 			const data = await res.json()
@@ -110,7 +111,7 @@ const RequestWeddingInformationForm = ({}: Props) => {
 					<select
 						value={weddingLocation}
 						onChange={handleWeddingLocationChange}
-						className={`${weddingLocation !== '¿Dónde es la boda?' ? 'border-[1px] border-green-400 text-agatha-text-a' : weddingLocation == '¿Dónde es la boda?' ? 'border-[1px] border-agatha-text-c/20 text-agatha-text-c uppercase' : 'border-[1px] border-red-500 ' } bg-agatha-button-bg-f px-[0.75rem] py-[0.5rem] outline-none rounded-3xl uppercase `}
+						className={`${weddingLocation !== '¿Dónde es la boda?' ? 'border-[1px] border-green-400 text-agatha-text-a' : weddingLocation == '¿Dónde es la boda?' ? 'border-[1px] border-agatha-text-c/20 text-agatha-text-c uppercase' : 'border-[1px] border-red-500 '} bg-agatha-button-bg-f px-[0.75rem] py-[0.5rem] outline-none rounded-3xl uppercase `}
 						title="¿Dónde es la boda?"
 						name="¿Dónde es la boda?"
 						id="wedding"
@@ -167,11 +168,11 @@ const RequestWeddingInformationForm = ({}: Props) => {
 						<option value="Otros">Otros</option>
 					</select>
 				</div>
-            <div className="flex flex-col w-full gap-[0.5rem] py-[0.5rem]">
+				<div className="flex flex-col w-full gap-[0.5rem] py-[0.5rem]">
 					<textarea
 						onChange={handleMessageChange}
-                  /* value={message} */
-						className={`${/^(?=.*[a-zA-Z])[\w\s]{2,40}$/.test(message) ? 'border-[1px] border-green-400 text-agatha-text-a' : message == "" ? 'text-agatha-text-c border-[1px] border-agatha-text-c/20' : 'border-[1px] text-agatha-text-b border-red-500'} bg-agatha-button-bg-f outline-none text-agatha-text-a  rounded-3xl w-full h-[9rem] px-[1rem] py-[1.125rem]`}
+						/* value={message} */
+						className={`${/^(?=.*[a-zA-Z])[\w\s]{2,40}$/.test(message) ? 'border-[1px] border-green-400 text-agatha-text-a' : message == '' ? 'text-agatha-text-c border-[1px] border-agatha-text-c/20' : 'border-[1px] text-agatha-text-b border-red-500'} bg-agatha-button-bg-f outline-none text-agatha-text-a  rounded-3xl w-full h-[9rem] px-[1rem] py-[1.125rem]`}
 						placeholder="DEJANOS UN MENSAJE"
 						title="mensaje"
 					/>

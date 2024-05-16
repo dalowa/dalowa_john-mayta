@@ -19,7 +19,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
 	whatsapp,
 	fullName,
 	howFoundUs,
-	message
+	message,
 }) => (
 	<ul>
 		<li>{`Email :${email}`}</li>

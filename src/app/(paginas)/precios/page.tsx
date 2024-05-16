@@ -1,17 +1,14 @@
-import BaseFrame from "@/components/Common/BaseFrame/BaseFrame";
+import BaseFrame from '@/components/Common/BaseFrame/BaseFrame'
 
-interface Props {
-   
-}
+interface Props {}
 
-const Precios = ({}:Props) => {
-   return (
-      <>
-         <BaseFrame>
-            <>
-            </>
-         </BaseFrame>
-      </>
-   )
+const Precios = ({}: Props) => {
+	return (
+		<>
+			<BaseFrame>
+				<></>
+			</BaseFrame>
+		</>
+	)
 }
-export default Precios;
+export default Precios
