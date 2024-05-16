@@ -26,6 +26,7 @@ export const MenuOption = ({ path, text }: Props) => {
 			onClick={handleSelectSecondMenuOption}
 			className={`uppercase  ${currentpath == path ? 'text-agatha-text-b font-bold' : 'text-agatha-text-c hover:text-agatha-text-b'}`}
 			href={path == undefined ? '' : path}
+			
 		>
 			{text}
 		</Link>

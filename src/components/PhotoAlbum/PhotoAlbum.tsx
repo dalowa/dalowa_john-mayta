@@ -101,7 +101,7 @@ export const PhotoAlbum = async ({ AlbumInformation, image, originGalleryUrl }: 
 							<BackToGalleryNavigator originUrl={originGalleryUrl} />
 						</div>
 						<div className="basis-[50%] gap-[1.5rem] flex items-center justify-end">
-							<NextOrBack />
+							<NextOrBack originUrl={originGalleryUrl} nextAlbumLink={AlbumInformation.nextAlbum} prevAlbumLink={AlbumInformation.prevAlbum} />
 							<ShareIconForPageGallery arrayImages={IMAGES_HD} currentImage={image || ''} />
 							<DownloadAlbumPhotos />
 						</div>

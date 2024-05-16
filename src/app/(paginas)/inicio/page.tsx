@@ -7,6 +7,8 @@ import { GenerateHomeMainAlbumsData } from '@/utils/Generator/GenerateHomeMainAl
 export default async function Inicio() {
 	const d = await GenerateHomeMainAlbumsData(MainPageEndPoints.inicio.requestUrl)
 
+	
+
 	return (
 		<>
 			<BaseFrame>

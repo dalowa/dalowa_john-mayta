@@ -4,15 +4,22 @@ import {
 	ReqAlbum_Images,
 	ReqBlurImage,
 	ReqFolder,
+	ReqFolder_Albums,
 	ReqImage_Sizes,
 	TypeResImage_Sizes,
 } from '../SmugmugAPI'
 import { ReqAlbum_Highlightimage } from '../SmugmugAPI/ReqAlbum_Highlightimage'
+import { getNextPrevLinks } from '../Functions/getNextPrevLinks'
 
 const SchemaGenerateImagesInAlbum = z.object({
 	Title: z.string(),
 	subTitle: z.string(),
 	Id: z.string(),
+	completeAlbumList: z.array(
+		z.string(),
+	),
+	nextAlbum: z.string().or(z.undefined()),
+	prevAlbum: z.string().or(z.undefined()),
 	HighlightImage: z.object({
 		smallScreen: z.string(),
 		mediumScreen: z.string(),
@@ -68,10 +75,17 @@ export const GenerateImagesInAlbum = async (
 			imagesDataSolved.map((e) => ReqBlurImage(e.MediumImageUrl)),
 		)
 
+		const albumList = (await ReqFolder_Albums(`${dataAlbum?.Response.Album.Uris.Folder.Uri}!albums`))?.Response.Album.map((e) => e.AlbumKey) as string[]
+
+		const nextandprev = getNextPrevLinks(albumId, albumList)
+
 		const data: TypeGenerateImagesInAlbum = {
 			Title: dataAlbum?.Response.Album.Name as string,
 			subTitle: dataAlbum?.Response.Album.Description as string,
+			nextAlbum: nextandprev.next,
+			prevAlbum: nextandprev.prev,
 			Id: albumId,
+			completeAlbumList: albumList,
 			HighlightImage: {
 				smallScreen: albumHighlightImageSizes?.SmallImageUrl as string,
 				mediumScreen: albumHighlightImageSizes?.MediumImageUrl as string,

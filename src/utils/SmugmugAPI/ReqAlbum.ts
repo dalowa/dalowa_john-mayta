@@ -15,6 +15,10 @@ const ResAlbum = z.object({
 				AlbumImages: z.object({
 					Uri: z.string(),
 				}),
+				Folder: z.object({
+					Uri: z.string(),
+				
+				})
 			}),
 		}),
 	}),
@@ -45,6 +49,9 @@ export async function ReqAlbum(URL: string): Promise<TypeResAlbum | undefined> {
 						AlbumImages: {
 							Uri: responseJSON.Response.Album.Uris.AlbumImages?.Uri,
 						},
+						Folder: {
+							Uri: responseJSON.Response.Album.Uris.Folder?.Uri
+						}
 					},
 				},
 			},

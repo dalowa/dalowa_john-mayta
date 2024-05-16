@@ -37,7 +37,7 @@ export const NavigationDesktop = ({ mainMenuOptions, secondMenuOptions }: Props)
 									key={e.id}
 									className="h-full text-agatha-text-c cursor-default hover:text-agatha-text-b "
 								>
-									<li
+									<div
 										className={`flex flex-col h-full justify-center items-end w-44 group/menu lg:w-52  relative`}
 									>
 										<div className="flex gap-1 items-center justify-end ">
@@ -61,7 +61,7 @@ export const NavigationDesktop = ({ mainMenuOptions, secondMenuOptions }: Props)
 												/>
 											))}
 										</ul>
-									</li>
+									</div>
 								</div>
 							)
 						}

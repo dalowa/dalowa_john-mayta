@@ -77,3 +77,6 @@ export const PortfolioAndPricingEndpoints = {
 
 export const GeneralInfoEndpoint =
 	'/api/v2/folder/user/seven/FAKE-OWNER-TESTING/ES/GENERAL-INFORMATION!folders'
+
+
+export let testingVariable:any;
